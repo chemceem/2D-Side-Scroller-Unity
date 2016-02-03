@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{19F2CDAB-A906-A4ED-38F9-8BCF4F17D827}") = "2D-SideScroller", "Assembly-CSharp.csproj", "{2C7BB0AB-A07B-9EF7-5558-823363AE2AB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C7BB0AB-A07B-9EF7-5558-823363AE2AB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C7BB0AB-A07B-9EF7-5558-823363AE2AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C7BB0AB-A07B-9EF7-5558-823363AE2AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C7BB0AB-A07B-9EF7-5558-823363AE2AB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
