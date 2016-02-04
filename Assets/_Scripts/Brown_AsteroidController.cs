@@ -40,6 +40,6 @@ public class Brown_AsteroidController : MonoBehaviour {
 		this._verticalSpeed = Random.Range (this.minVerticalSpeed, this.maxVerticalSpeed);
 		this._horizontalSpeed = Random.Range (this.minHorizontalSpeed, this.maxHorizontalSpeed);
 		float yPosition = Random.Range (-355,355);
-		this._transform.position = new Vector2 (630, yPosition);
+		this._transform.position = new Vector2 (690, yPosition);
 	}
 }

@@ -9,7 +9,7 @@ public class ShipController : MonoBehaviour {
 	private float _playerInput;
 
 	//PUBLIC INSTANCE VARIABLES
-	public float speed = 8f;
+	public float speed = 10f;
 
 	// Use this for initialization
 	void Start () {
