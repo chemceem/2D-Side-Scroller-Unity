@@ -8,7 +8,7 @@ public class SpaceController : MonoBehaviour {
 	private Vector2 _currentPosition;
 
 	//PUBLIC VARIABLES
-	float speed = 5f;
+	public  float speed = 5f;
 
 	// Use this for initialization
 	void Start () {
@@ -27,7 +27,7 @@ public class SpaceController : MonoBehaviour {
 		}		
 	}
 
-	void Reset(){
-		this._transform.position = new Vector2 (456f, 0);
+	public void Reset(){
+		this._transform.position = new Vector2(456f, 0);
 	}
-}
+}	
