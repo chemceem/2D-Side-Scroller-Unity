@@ -5,8 +5,8 @@ public class Grey_AsteroidController : MonoBehaviour {
 
 	//public instance variables
 	public float rotationSpeed = -2f;
-	public float maxVerticalSpeed = 2f;
-	public float minVerticalSpeed = -2f;
+	public float maxVerticalSpeed = 3f;
+	public float minVerticalSpeed = -3f;
 	public float maxHorizontalSpeed = 16f;
 	public float minHorizontalSpeed = 7f;
 
@@ -30,7 +30,6 @@ public class Grey_AsteroidController : MonoBehaviour {
 		this._currentPosition -= new Vector2 (this._horizontalSpeed, this._verticalSpeed);
 		this._transform.position = this._currentPosition;
 		this._transform.Rotate (0,0,rotationSpeed);
-
 		if (_transform.position.x <= -700) {
 			this.Reset ();
 		}

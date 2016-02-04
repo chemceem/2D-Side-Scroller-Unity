@@ -45,6 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\Brown_AsteroidController.cs" />
+     <Compile Include="Assets\_Scripts\GameController.cs" />
      <Compile Include="Assets\_Scripts\Grey_AsteroidController.cs" />
      <Compile Include="Assets\_Scripts\ShipController.cs" />
      <Compile Include="Assets\_Scripts\Silver_StarController.cs" />
