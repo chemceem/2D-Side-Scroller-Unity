@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /*
  * @author : Chemcee Cherian
@@ -12,17 +13,22 @@ public class GameController : MonoBehaviour {
 	private int _scoreValue;
 	private int _lifeValues;
 
+	[SerializeField]
+	private AudioSource _gameOverSound;
+
 	//public instance variables
 	public int noOfGreyAsteroids = 3;	//three grey asteroids
 	public int noOfBrownAsteroids = 4; //four brown asteroids
 	public AsteroidController_Grey grey_asteroid;
 	public AsteroidController_Brown brown_asteroid;
-	public Text LivesText;
-	public Text ScoreText;
-	public Text GameoverText;
 	public ShipController spaceShip;
 	public StarController_Gold goldStar;
 	public StarController_Silver silverStar;
+	public Text LivesText;
+	public Text ScoreText;
+	public Text GameoverText;
+	public Text HighScoreText;
+	public Button RestartButton;
 
 	//PUBLIC ACCESS METHODS
 	public int ScoreValue{
@@ -60,12 +66,14 @@ public class GameController : MonoBehaviour {
 	}
 
 	//PRIVATE METHODS
-
 	//inital method
 	private void _initialize(){
 		this.ScoreValue = 0;
 		this.LivesValue = 5;
 		this.GameoverText.enabled = false;
+		this.HighScoreText.enabled = false;
+		//this.RestartButton.enabled = false;
+		this.RestartButton.gameObject.SetActive(false);
 
 		for (int greyCount = 0; greyCount < noOfGreyAsteroids; greyCount++) {   
 			//Vector3 scale = new Vector3((transform.localScale.x+greyCount),(transform.localScale.y+greyCount),(transform.localScale.z+greyCount));
@@ -87,10 +95,20 @@ public class GameController : MonoBehaviour {
 	}
 
 	private void _endGame(){
+		this.HighScoreText.text = "High Score : " + this._scoreValue;
 		this.GameoverText.enabled = true;
+		this.HighScoreText.enabled = true;
+		this.RestartButton.gameObject.SetActive(true);
 		this.LivesText.text = "Lives : 0";
 		this.spaceShip.gameObject.SetActive(false);
 		this.silverStar.gameObject.SetActive(false);
 		this.goldStar.gameObject.SetActive(false);
+		this._gameOverSound.Play ();
+	}
+
+	//PUBLIC METHOD
+	public void RestartButtonClick(){
+		//Application.LoadLevel ("main");  deprecated , old way of loading scene
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 }

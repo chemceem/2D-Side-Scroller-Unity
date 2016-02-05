@@ -29,7 +29,7 @@ public class StarController_Gold : MonoBehaviour {
 		this._currentPosition -= new Vector2 (this._horizontalSpeed, this._verticalSpeed);
 		this._transform.position = this._currentPosition;
 		this._transform.Rotate (0,0,rotateSpeed);
-		if (this._currentPosition.x <= -2000) {
+		if (this._currentPosition.x <= -580) {
 			this.Reset ();
 		}
 	}
@@ -38,6 +38,6 @@ public class StarController_Gold : MonoBehaviour {
 		this._verticalSpeed = Random.Range (this.minVerticalSpeed, this.maxVerticalSpeed);
 		this._horizontalSpeed = Random.Range (this.minHorizontalSpeed, this.maxHorizontalSpeed);
 		float yPosition = Random.Range (-370,370);
-		this._transform.position = new Vector2 (590, yPosition);
+		this._transform.position = new Vector2 (1900, yPosition);
 	}
 }

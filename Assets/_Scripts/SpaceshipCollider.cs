@@ -14,6 +14,8 @@ public class SpaceshipCollider : MonoBehaviour {
 
 	//PUBLIC INSTANCE VARIABLES
 	public GameController gameController;
+	public StarController_Gold goldStar;
+	public StarController_Silver silverStar;
 
 	// Use this for initialization
 	void Start () {
@@ -29,10 +31,16 @@ public class SpaceshipCollider : MonoBehaviour {
 	}
 
 	public void OnTriggerEnter2D(Collider2D other){
-		if (other.gameObject.CompareTag ("Star")) {
+		if (other.gameObject.CompareTag ("GoldStar")) {
 			this._starSound.Play ();
 			this.gameController.ScoreValue += 100;
+			goldStar.transform.position = new Vector2 (1900, Random.Range(-370,370));
+		}
 
+		if (other.gameObject.CompareTag ("SilverStar")) {
+			this._starSound.Play ();
+			this.gameController.ScoreValue += 100;
+			silverStar.transform.position = new Vector2 (620, Random.Range(-370,370));
 		}
 
 		if (other.gameObject.CompareTag ("Asteroid")) {
