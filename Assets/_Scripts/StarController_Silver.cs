@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Silver_StarController : MonoBehaviour {
+public class StarController_Silver : MonoBehaviour {
 
 	//public instance variables
 	public float speed = 7f;

@@ -1,36 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Grey_AsteroidController : MonoBehaviour {
+public class StarController_Gold : MonoBehaviour {
 
-	//public instance variables
-	public float rotationSpeed = -2f;
-	public float maxVerticalSpeed = 3f;
-	public float minVerticalSpeed = -3f;
-	public float maxHorizontalSpeed = 16f;
-	public float minHorizontalSpeed = 7f;
-
-	//private instance variables
-	Transform _transform;
-	Vector2 _currentPosition;
-	private float _verticalSpeed;
+	//PRIVATE INSTANCE VARIABLES
+	private Transform _transform;
+	private Vector2 _currentPosition;
 	private float _horizontalSpeed;
+	private float _verticalSpeed;
+
+	//PUBLIC INSTANCE VARIABLES
+	public float maxHorizontalSpeed = 14f;
+	public float minHorizontalSpeed = 8f;
+ 	public float minVerticalSpeed = -0.5f;
+	public float maxVerticalSpeed = 0.5f;
+	public float rotateSpeed = 6f;
+
 
 	// Use this for initialization
 	void Start () {
 		this._transform = gameObject.GetComponent<Transform> ();
-
-		//to reset the asteroid to the top
 		this.Reset ();
 	}
-
+	
 	// Update is called once per frame
 	void Update () {
 		this._currentPosition = this._transform.position;
 		this._currentPosition -= new Vector2 (this._horizontalSpeed, this._verticalSpeed);
 		this._transform.position = this._currentPosition;
-		this._transform.Rotate (0,0,rotationSpeed);
-		if (_transform.position.x <= -700) {
+		this._transform.Rotate (0,0,rotateSpeed);
+		if (this._currentPosition.x <= -2000) {
 			this.Reset ();
 		}
 	}
@@ -38,7 +37,7 @@ public class Grey_AsteroidController : MonoBehaviour {
 	void Reset(){
 		this._verticalSpeed = Random.Range (this.minVerticalSpeed, this.maxVerticalSpeed);
 		this._horizontalSpeed = Random.Range (this.minHorizontalSpeed, this.maxHorizontalSpeed);
-		float yPosition = Random.Range (-315,315);
-		this._transform.position = new Vector2 (690, yPosition);
+		float yPosition = Random.Range (-370,370);
+		this._transform.position = new Vector2 (590, yPosition);
 	}
 }

@@ -45,14 +45,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Scripts\Brown_AsteroidController.cs" />
+     <Compile Include="Assets\_Scripts\AsteroidController_Brown.cs" />
+     <Compile Include="Assets\_Scripts\AsteroidController_Grey.cs" />
      <Compile Include="Assets\_Scripts\GameController.cs" />
-     <Compile Include="Assets\_Scripts\Grey_AsteroidController.cs" />
      <Compile Include="Assets\_Scripts\ShipController.cs" />
-     <Compile Include="Assets\_Scripts\Silver_StarController.cs" />
      <Compile Include="Assets\_Scripts\SpaceController.cs" />
      <Compile Include="Assets\_Scripts\SpaceshipCollider.cs" />
-     <Compile Include="Assets\_Scripts\StarController.cs" />
+     <Compile Include="Assets\_Scripts\StarController_Gold.cs" />
+     <Compile Include="Assets\_Scripts\StarController_Silver.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
