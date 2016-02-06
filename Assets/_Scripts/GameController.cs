@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 /*
  * @author : Chemcee Cherian
- * Last Modified : 05/02/2016
+ * Last modified : 05/02/2016 2155hrs
  * */
 public class GameController : MonoBehaviour {
 
@@ -18,17 +18,19 @@ public class GameController : MonoBehaviour {
 
 	//public instance variables
 	public int noOfGreyAsteroids = 3;	//three grey asteroids
-	public int noOfBrownAsteroids = 4; //four brown asteroids
+	public int noOfBrownAsteroids = 3; //four brown asteroids
 	public AsteroidController_Grey grey_asteroid;
 	public AsteroidController_Brown brown_asteroid;
 	public ShipController spaceShip;
 	public StarController_Gold goldStar;
 	public StarController_Silver silverStar;
+	public PowerUpController powerUp;
 	public Text LivesText;
 	public Text ScoreText;
 	public Text GameoverText;
 	public Text HighScoreText;
 	public Button RestartButton;
+	public Button MenuButton;
 
 	//PUBLIC ACCESS METHODS
 	public int ScoreValue{
@@ -45,7 +47,7 @@ public class GameController : MonoBehaviour {
 		get { 
 			return _lifeValues;
 		}
-		set{ 
+		set{
 			this._lifeValues = value;
 			if (this._lifeValues <= 0) {
 				this._endGame ();
@@ -74,6 +76,7 @@ public class GameController : MonoBehaviour {
 		this.HighScoreText.enabled = false;
 		//this.RestartButton.enabled = false;
 		this.RestartButton.gameObject.SetActive(false);
+		this.MenuButton.gameObject.SetActive (false);
 
 		for (int greyCount = 0; greyCount < noOfGreyAsteroids; greyCount++) {   
 			//Vector3 scale = new Vector3((transform.localScale.x+greyCount),(transform.localScale.y+greyCount),(transform.localScale.z+greyCount));
@@ -88,17 +91,18 @@ public class GameController : MonoBehaviour {
 		for (int brownCount = 0; brownCount < noOfBrownAsteroids; brownCount++) {
 			GameObject browngame = Instantiate (brown_asteroid.gameObject);
 				//one asteroid will be scaled to twice the size
-			if (brownCount < 3) {
+			if (brownCount < 2) {
 				browngame.transform.localScale = new Vector3 (1,1,1);
 			}
 		}
 	}
 
 	private void _endGame(){
-		this.HighScoreText.text = "High Score : " + this._scoreValue;
+		this.HighScoreText.text = "Score : " + this._scoreValue;
 		this.GameoverText.enabled = true;
 		this.HighScoreText.enabled = true;
 		this.RestartButton.gameObject.SetActive(true);
+		this.MenuButton.gameObject.SetActive (true);
 		this.LivesText.text = "Lives : 0";
 		this.spaceShip.gameObject.SetActive(false);
 		this.silverStar.gameObject.SetActive(false);
@@ -110,5 +114,9 @@ public class GameController : MonoBehaviour {
 	public void RestartButtonClick(){
 		//Application.LoadLevel ("main");  deprecated , old way of loading scene
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+	}
+
+	public void ShowMenu(){
+		SceneManager.LoadScene ("start");
 	}
 }

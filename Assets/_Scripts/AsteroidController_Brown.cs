@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * @author : Chemcee Cherian
+ * Last modified : 05/02/2016 2155hrs
+ * */
 public class AsteroidController_Brown : MonoBehaviour {
 
 	//public instance variables

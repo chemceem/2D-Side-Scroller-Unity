@@ -1,14 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\StarController_Gold.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\GameController.cs">
     <Files>
-      <File FileName="Assets\_Scripts\SpaceshipCollider.cs" Line="37" Column="77" />
+      <File FileName="Assets\_Scripts\GameController.cs" Line="93" Column="22" />
+      <File FileName="Assets\_Scripts\StartMenuController.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\SpaceshipCollider.cs" Line="1" Column="1" />
       <File FileName="Assets\_Scripts\ShipController.cs" Line="12" Column="25" />
-      <File FileName="Assets\_Scripts\GameController.cs" Line="87" Column="3" />
-      <File FileName="Assets\_Scripts\StarController_Silver.cs" Line="34" Column="59" />
-      <File FileName="Assets\_Scripts\StarController_Gold.cs" Line="39" Column="54" />
+      <File FileName="Assets\_Scripts\StarController_Silver.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\StarController_Gold.cs" Line="1" Column="1" />
       <File FileName="Assets\_Scripts\AsteroidController_Grey.cs" Line="1" Column="1" />
       <File FileName="Assets\_Scripts\AsteroidController_Brown.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\SpaceController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

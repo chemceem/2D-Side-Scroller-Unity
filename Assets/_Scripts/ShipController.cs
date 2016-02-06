@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * @author : Chemcee Cherian
+ * Last modified : 05/02/2016 2155hrs
+ * */
 public class ShipController : MonoBehaviour {
 
 	//PRIVATE INSTANCE VARIABLES
@@ -9,7 +13,7 @@ public class ShipController : MonoBehaviour {
 	private float _playerInput;
 
 	//PUBLIC INSTANCE VARIABLES
-	public float speed = 15f;
+	public float speed = 12f;
 
 	// Use this for initialization
 	void Start () {

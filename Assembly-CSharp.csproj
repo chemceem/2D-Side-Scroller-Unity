@@ -48,11 +48,14 @@
      <Compile Include="Assets\_Scripts\AsteroidController_Brown.cs" />
      <Compile Include="Assets\_Scripts\AsteroidController_Grey.cs" />
      <Compile Include="Assets\_Scripts\GameController.cs" />
+     <Compile Include="Assets\_Scripts\InstructionSceneController.cs" />
+     <Compile Include="Assets\_Scripts\PowerUpController.cs" />
      <Compile Include="Assets\_Scripts\ShipController.cs" />
      <Compile Include="Assets\_Scripts\SpaceController.cs" />
      <Compile Include="Assets\_Scripts\SpaceshipCollider.cs" />
      <Compile Include="Assets\_Scripts\StarController_Gold.cs" />
      <Compile Include="Assets\_Scripts\StarController_Silver.cs" />
+     <Compile Include="Assets\_Scripts\StartMenuController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
