@@ -37,6 +37,7 @@ public class ShipController : MonoBehaviour {
 		this._transform.position = this._currentPosition;
 	}
 
+	//check if the ship has gone beyond the border of the game
 	private void Checkbound() {
 		if (this._currentPosition.y < -348) {
 			this._currentPosition.y = -348;

@@ -36,6 +36,7 @@ public class PowerUpController : MonoBehaviour {
 		}
 	}
 
+	//to reset the position of the object
 	void Reset(){		
 		this._horizontalSpeed = Random.Range (this.minHorizontalSpeed, this.maxHorizontalSpeed);
 		float yPosition = Random.Range (-370,370);

@@ -97,6 +97,7 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+	//called when the players has lost all the lives
 	private void _endGame(){
 		this.HighScoreText.text = "Score : " + this._scoreValue;
 		this.GameoverText.enabled = true;
@@ -111,11 +112,14 @@ public class GameController : MonoBehaviour {
 	}
 
 	//PUBLIC METHOD
+
+	//to restart the game
 	public void RestartButtonClick(){
 		//Application.LoadLevel ("main");  deprecated , old way of loading scene
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 
+	//to go to the start screen
 	public void ShowMenu(){
 		SceneManager.LoadScene ("start");
 	}

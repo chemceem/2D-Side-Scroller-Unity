@@ -4,6 +4,9 @@ using System.Collections;
 /*
  * @author : Chemcee Cherian
  * Last modified : 05/02/2016 2155hrs
+ *
+ * Script used to assign the speed, drift and rotation to 
+ * brown asteroids. 
  * */
 public class AsteroidController_Brown : MonoBehaviour {
 

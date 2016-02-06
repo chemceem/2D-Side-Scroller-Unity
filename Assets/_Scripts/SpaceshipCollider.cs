@@ -33,6 +33,7 @@ public class SpaceshipCollider : MonoBehaviour {
 	
 	}
 
+	//to check if the object has collided with another
 	public void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.CompareTag ("GoldStar")) {
 			this._starSound.Play ();

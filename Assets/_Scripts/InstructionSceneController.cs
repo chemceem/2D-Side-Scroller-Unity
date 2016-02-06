@@ -21,6 +21,7 @@ public class InstructionSceneController : MonoBehaviour {
 	
 	}
 
+	//to go back to the start screen
 	public void ShowMenu(){
 		SceneManager.LoadScene ("start");
 	}
