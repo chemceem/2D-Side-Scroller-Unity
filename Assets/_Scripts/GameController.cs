@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour {
 
 	//public instance variables
 	public int noOfGreyAsteroids = 3;	//three grey asteroids
-	public int noOfBrownAsteroids = 3; //four brown asteroids
+	public int noOfBrownAsteroids = 4; //four brown asteroids
 	public AsteroidController_Grey grey_asteroid;
 	public AsteroidController_Brown brown_asteroid;
 	public ShipController spaceShip;
@@ -91,7 +91,7 @@ public class GameController : MonoBehaviour {
 		for (int brownCount = 0; brownCount < noOfBrownAsteroids; brownCount++) {
 			GameObject browngame = Instantiate (brown_asteroid.gameObject);
 				//one asteroid will be scaled to twice the size
-			if (brownCount < 2) {
+			if (brownCount < 3) {
 				browngame.transform.localScale = new Vector3 (1,1,1);
 			}
 		}

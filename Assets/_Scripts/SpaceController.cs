@@ -26,12 +26,12 @@ public class SpaceController : MonoBehaviour {
 		this._currentPosition -= new Vector2 (speed, 0);
 		this._transform.position = this._currentPosition;
 
-		if (this._currentPosition.x <= -456) {
+		if (this._currentPosition.x <= -300) {
 			Reset ();
 		}		
 	}
 
 	public void Reset(){
-		this._transform.position = new Vector2(456f, 0);
+		this._transform.position = new Vector2(300f, 0);
 	}
 }	
